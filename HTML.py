@@ -1,3 +1,4 @@
+#it is used to remove all html tags from the file
 from bs4 import BeautifulSoup
 import os
 data_root="../../cleantext"
