@@ -2,7 +2,7 @@ import logging
 import random
 
 from .common import _let_user_try, _generate_random_syn_or_ant
-from ..client import all_results
+from client import all_results
 
 log = logging.getLogger(__name__)
 

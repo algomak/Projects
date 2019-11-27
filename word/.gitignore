@@ -1,0 +1,17 @@
+# python
+.cache/
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage
+*.pyc
+
+# vim
+tags
+
+# spyder & idea
+*.spyderworkspace
+.idea/
+
+#virtual environments
+venv*

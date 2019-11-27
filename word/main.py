@@ -1,8 +1,8 @@
-from .controller.app import resolve
-from .core.app import play
+from controller.app import resolve
+from core.app import play
 import sys
 
-if __name__ == 'main':
+if __name__ == '__main__':
     if sys.argv[0] == 'play':
         play()
     else:

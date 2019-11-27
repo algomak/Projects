@@ -1,6 +1,6 @@
 from ._common import default_api_key, get_template_t1_string, get_api_url, template1, template2, t1_requests, \
     t2_requests
-from ..core import Word
+from .word import Word
 import requests
 import json
 

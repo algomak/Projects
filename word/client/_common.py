@@ -18,6 +18,7 @@ t1_requests = ["examples", "definations", "relatedWords"]
 t2_requests = ["randomWord"]
 
 def get_template_t1_string(template: Template, **kwargs):
+    temp = template
     word = kwargs.pop("word", None)
     suffix = kwargs.pop("suffix", None)
     if word is not None:
