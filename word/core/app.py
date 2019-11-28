@@ -3,10 +3,7 @@ import random
 
 from ._common import _get_user_input, _get_another_randomly, _choices_list, print_pretty
 import client  # circular import
-<<<<<<< HEAD
 from ._common import _word_structure
-=======
->>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
 
 log = logging.getLogger(__name__)
 
@@ -25,15 +22,12 @@ def _setup_game_word(word):
     game_word[random_relation] = _get_another_randomly(word, random_relation)
     game_word['defn'] = _get_another_randomly(word, 'defn')
     log.info(f'generated game word: {str(game_word)}')
-<<<<<<< HEAD
     # print info to user
     for key in game_word:
         if key != 'word' and game_word[key] is not None:
             print(
                 f"{_word_structure[key]}: {game_word[key]}"
             )
-=======
->>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
     return game_word
 
 
@@ -134,13 +128,8 @@ _hint_interface_map = {
 _hint_print_tuple = {
     '1': "Display the word randomly jumbled (cat => atc, tac, tca)",
     '2': "Display another definition of the word",
-<<<<<<< HEAD
     '3': "Display another synonym of the word",
     '4': "Display another antonym of the word"
-=======
-    '3': "Display another antonym of the word",
-    '4': "Display another synonym of the word"
->>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
 }
 
 
@@ -161,15 +150,8 @@ def play(word=None):
     while not end_game:
         # keep playing
         if user_word == word.literal_value or user_word in word.syn:
-<<<<<<< HEAD
             print('Correct answer! You won!')
             return
         user_input = _show_wrong_word_interface()
         user_word, end_game = _wrong_interface_map[user_input](game_word)
     return
-=======
-            return 'Correct answer! You won!'
-        user_input = _show_wrong_word_interface()
-        user_word, end_game = _wrong_interface_map[user_input](game_word)
-    return "Better luck next time! :)"
->>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
