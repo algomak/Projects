@@ -1,8 +1,11 @@
 # word dict
-Single command install
-chmod +x install.sh
-./install.sh
+#### Installation
 
+`chmod +x install.sh`
+
+`./install.sh`
+
+####Problem statements:
 
 [1.] Word Definitions
 
