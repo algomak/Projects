@@ -1,9 +1,10 @@
 from controller.app import resolve
-from core.app import play
+from core import play, print_pretty
 import sys
 
 if __name__ == '__main__':
-    if sys.argv[0] == 'play':
+    if len(sys.argv) == 2 and sys.argv[1] == 'play':
         play()
     else:
-        print(resolve(sys.argv))
+        res = resolve(sys.argv)
+        print_pretty(res)
