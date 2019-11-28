@@ -1,6 +1,7 @@
 from typing import List
 from attr import dataclass
 
+
 @dataclass
 class Word:
     literal_value: str
@@ -16,5 +17,3 @@ class Word:
             f"synonyms: {self.syn}\n" \
             f"antonyms: {self.ant}\n"
         return full_dict_str
-
-

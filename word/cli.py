@@ -5,6 +5,8 @@ from requests import HTTPError
 import logging
 
 log = logging.getLogger(__name__)
+
+
 def main():
     try:
         if len(sys.argv) > 1 and sys.argv[1] == 'play':
@@ -14,5 +16,5 @@ def main():
     except HTTPError as exc:
         print(f"HTTPError: {exc.response.status_code}, {exc.response.text}")
     except Exception as exc:
-        log.error(exc)
+        log.error(exc.with_traceback())
         print(f"Unknown exception occurred!: {exc}")

@@ -50,10 +50,8 @@ def _try_again(game_word):
 def _hint(game_word):
     """
 
-    :param word:
-    :param curr_syn_or_ant:
+    :param game_word:
     :return:
-    randomly selects one of these:
             1. Display the word randomly jumbled (cat => atc, tac, tca)
             2. Display another definition of the word
             3. Display another antonym of the word
@@ -78,7 +76,7 @@ def _quit(game_word):
     return '', True
 
 
-def _jumble_word(game_word) -> str:
+def _jumble_word(game_word) -> None:
     word = game_word['word']
     word_list = list(word.literal_value)
     random.shuffle(word_list)
