@@ -1,6 +1,10 @@
 import sys
 from client import definitions, synonyms, antonyms, all_results, random_word, examples
+<<<<<<< HEAD
 from core import play, print_pretty, _common
+=======
+from core import play, print_pretty
+>>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
 
 # this map should be open for extension and closed for modifications
 _ops_map = {

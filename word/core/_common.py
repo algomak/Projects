@@ -21,6 +21,7 @@ def _get_another_randomly(word: Word, attribute: str, curr_value: str = None):
     """
     log.info(f"getting another value for attribute: {attribute}, word: {word.literal_value}")
     if attribute in word.__dict__:
+<<<<<<< HEAD
         if getattr(word, attribute) is not None:
             attribute_list = list(getattr(word, attribute))
             if len(attribute_list) > 1:
@@ -28,12 +29,24 @@ def _get_another_randomly(word: Word, attribute: str, curr_value: str = None):
                     attribute_list.remove(curr_value)
                 return random.choice(attribute_list)
         else:
+=======
+        attribute_list = list(getattr(word, attribute))
+        if len(attribute_list) > 1:
+            if curr_value in attribute_list:
+                attribute_list.remove(curr_value)
+            return random.choice(attribute_list)
+        if len(attribute_list) == 0:
+>>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
             return None
     else:
         log.info(f"Wrong attribute value, available attributes: {list(word.__dict__.keys())}")
 
 
+<<<<<<< HEAD
 def _print_list(anylist: list, list_title=None) -> None:
+=======
+def _print_list(anylist: list, list_title=None)->None:
+>>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
     """
 
     :param anylist:
@@ -42,10 +55,16 @@ def _print_list(anylist: list, list_title=None) -> None:
     if list_title is not None:
         print(list_title)
     for idx, element in enumerate(anylist):
+<<<<<<< HEAD
         print(f"{idx + 1}: {element}")
     print("\n")
 
 
+=======
+        print(f"{idx+1}: {element}")
+    print("\n")
+
+>>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
 _word_structure = {
     "literal_value": "Word",
     "defn": "Definations",
@@ -54,7 +73,10 @@ _word_structure = {
     "ant": "Antonyms"
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 97716f3498f035286d9dafaa544ade3f7028a795
 def print_pretty(object):
     """
     utility function for printing
