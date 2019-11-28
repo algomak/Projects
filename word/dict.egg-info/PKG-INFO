@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: dict
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/algomak/Projects/tree/master/word
+License: UNKNOWN
+Description: 
+        # Projects
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0

@@ -1,0 +1,14 @@
+README.md
+setup.py
+client/__init__.py
+client/_common.py
+client/app.py
+core/__init__.py
+core/_common.py
+core/app.py
+core/word.py
+dict.egg-info/PKG-INFO
+dict.egg-info/SOURCES.txt
+dict.egg-info/dependency_links.txt
+dict.egg-info/entry_points.txt
+dict.egg-info/top_level.txt
