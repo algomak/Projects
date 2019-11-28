@@ -11,4 +11,5 @@ dict.egg-info/PKG-INFO
 dict.egg-info/SOURCES.txt
 dict.egg-info/dependency_links.txt
 dict.egg-info/entry_points.txt
+dict.egg-info/requires.txt
 dict.egg-info/top_level.txt

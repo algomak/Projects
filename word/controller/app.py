@@ -2,6 +2,7 @@ import sys
 from client import definitions, synonyms, antonyms, all_results, random_word, examples
 from core import play, print_pretty
 from requests import HTTPError
+import logging
 
 # this map should be open for extension and closed for modifications
 _ops_map = {
@@ -13,13 +14,14 @@ _ops_map = {
 
 _max_arguments = 3  # 2+1 (filename.py)
 
+log = logging.getLogger(__name__)
 
 # routing logic
 def resolve(args):
     print("Getting info for you...")
     # first argument is 'filename.py'
     if len(args) > _max_arguments:
-        print ('Invalid Input')
+        print('Invalid Input')
     elif len(args) == _max_arguments:
         if args[1] not in _ops_map:
             print(f'invalid operation: {args[1]}')
@@ -30,8 +32,6 @@ def resolve(args):
                 print(f"HTTPError: {exc.response.status_code}, {exc.response.text}")
             except Exception as exc:
                 print(f"Unknown exception occured!: {exc}")
-
-
     elif len(args) == 2:
         return all_results(args[1])
     elif len(args) == 1:
@@ -40,11 +40,12 @@ def resolve(args):
 
 if __name__ == '__main__':
     try:
-        if sys.argv[1] == 'play':
-                play()
+        if len(sys.argv) > 1 and sys.argv[1] == 'play':
+            play()
         else:
             print_pretty(resolve(sys.argv))
     except HTTPError as exc:
         print(f"HTTPError: {exc.response.status_code}, {exc.response.text}")
     except Exception as exc:
+        log.error(exc.with_traceback())
         print(f"Unknown exception occurred!: {exc}")
