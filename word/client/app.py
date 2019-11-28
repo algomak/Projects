@@ -33,11 +33,6 @@ def _execute(operation, word_str=None, suffix=None):
     return body
 
 
-def definitions(word_str) -> List[str]:
-    results = _execute("definitions", word_str, "definitions")
-    return _extraxct_text(results)
-
-
 def _extraxct_text(anylist: List):
     """
     helper function for schema of examples and definitions apis
@@ -49,8 +44,13 @@ def _extraxct_text(anylist: List):
     return [e['text'] for e in anylist]
 
 
-def examples(word) -> List[str]:
-    results = _execute("examples", word, "examples")
+def definitions(word_str) -> List[str]:
+    results = _execute("definitions", word_str, "definitions")
+    return _extraxct_text(results)
+
+
+def examples(word_str) -> List[str]:
+    results = _execute("examples", word_str, "examples")
     return _extraxct_text(results["examples"])
 
 
