@@ -14,7 +14,7 @@ setup(
     python_requires='>=3.6.0',
     install_requires=[
         'attrs==17.4.0',
-        'requests==2.22.0',
+        'requests==2.31.0',
         'attr==0.3.1'
     ],
     include_package_data=True,
